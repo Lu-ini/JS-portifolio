@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'neue-machina';
+    src: url(/assets/fonts/neue-machina.otf);
+}
+
+body {
+    background: rgb(38,74,130);
+    background: linear-gradient(200deg, rgb(25, 50, 90) 0%, rgba(1,14,33,1) 21%, rgba(13,3,22,1) 60%, rgb(47, 7, 48) 88%, rgb(65, 4, 48) 100%);
+    background-size: 500%;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+    animation: bg-animation 6s ease infinite;
+}
+
+
+@keyframes bg-animation {
+    0%{
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+
+.corpo {
+    height: 100vh;
+    padding: 1rem;
+    margin: 1rem;
+    border: .7px solid white;
+    border-radius: 10px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cabecalho .perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 5px;
+}
+
+.cabecalho .titulo-1 {
+    font-family: 'neue-machina';
+    height: 3rem;
+    margin: 0;
+    font-size: 3rem;
+    animation: brilho 3s ease-in-out infinite;
+}
+
+@keyframes brilho {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0px 0px 15px white;
+    }
+    100% {
+        text-shadow: none;
+    }
+    
+}
+
+.cabecalho .titulo-2 {
+    font-family: 'neue-machina';
+    height: 3.5rem;
+    margin: 20px auto 0 auto;
+    padding-top: 1rem;
+    font-weight: 100;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 1rem 0 1rem 1rem;
+}
+
+.info img {
+    filter: invert();
+}
+
+.info p {
+    margin: .7rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
