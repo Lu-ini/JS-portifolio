@@ -105,3 +105,36 @@ body {
     align-items: center;
     gap: 15px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .cabecalho {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 4fr;
+        grid-template-areas: 
+        "foto titulo"
+        "foto titulo"
+        "foto perfil";
+    }
+
+    .corpo {
+        max-width: 60vw;
+        margin: auto;
+    }
+    .perfil {
+        grid-area: foto;
+        align-self: center;
+        margin: auto;
+    }
+    .titulo-1 {
+        grid-area: titulo;
+    }
+    .titulo-2 {
+        grid-area: titulo;
+        align-self: flex-start;
+    }
+    .info {
+        grid-area: perfil;
+    }
+}
