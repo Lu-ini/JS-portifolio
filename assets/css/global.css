@@ -11,7 +11,7 @@
 body {
     background: rgb(38,74,130);
     height: 100vh;
-    padding: 5rem;
+    padding: 1rem 3rem;
     background: linear-gradient(200deg, rgb(25, 50, 90) 0%, rgba(1,14,33,1) 21%, rgba(13,3,22,1) 60%, rgb(47, 7, 48) 88%, rgb(65, 4, 48) 100%);
     background-size: 500%;
     position: relative;
@@ -37,7 +37,10 @@ body {
 
 
 .corpo {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    height: fit-content;
     padding: 1rem;
     margin: 1rem;
     border: .7px solid white;

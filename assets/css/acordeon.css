@@ -14,7 +14,9 @@
 }
 
 .container .content {
-    display: none;
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
 }
 
 .container .btn-idioma {
@@ -38,19 +40,20 @@
     content: "";
     display: inline-block;
     width: 1.3rem;
-    height: 1.3rem;
+    height: .8rem;
     background-image: url(/assets/icons/seta-botao.png);
     background-repeat: no-repeat;
     background-size: contain;
-    transform: rotate(180deg);
+    transition: .3s ease;
 }
 
 .container.open .btn-idioma::after {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
     background-color: #55569E;
     border-color: #55569E;
 }
 
 .container.open .content {
-    display: inline-block
+    display: inline-block;
+    height: 100%;
 }
